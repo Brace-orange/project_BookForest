@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "mongoose": "^5.2.5",
+    "express":"latest",
+    "ejs":"latest",
+    "formidable":"latest"    
+  },
+  "name": "project_bookforest",
+  "version": "1.0.0",
+  "description": "这是一个nodejs+expresss+mongoose+jquery开发的书籍森林",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brace",
+  "license": "ISC"
+}

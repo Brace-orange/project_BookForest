@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>BookForest-增加记录已读书籍</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+   <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <strong>欢迎来到 B o o k - F o r e s t  </strong>
+                    &nbsp;&nbsp;
+                    <strong>属于你的小书屋</strong>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END-->
+    <div class="navbar navbar-inverse set-radius-zero">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="/img/1.jpg" />
+                </a>
+            </div>
+            <div class="left-div">
+                <div class="user-settings-wrapper">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-settings">
+                              <!-- ynghuxinxi -->
+                                <div class="media">
+                                    <a class="media-left" href="#">
+                                      <!-- 头像 -->
+                                        <img src="/img/0.jpg" alt="" class="img-rounded" />
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Brace_orange </h4>
+                                        <h5>我喜欢读书</h5>
+                                    </div>
+                                </div>
+                                <hr />
+                                <h5><strong>其他信息</strong></h5>
+                                暂时没有其他啊信息
+                                <hr />
+                                <a href="#" class="btn btn-info btn-sm">暂时留白</a>&nbsp; <a href="#" class="btn btn-danger btn-sm">注册</a>
+                            </div>
+                        </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">
+                            <li><a class="menu-top-active" href="add">记录已读书籍</a></li>
+                            <li><a  href="/">已读书籍清单</a></li>
+                            <li><a href="table.html">近期要读的书</a></li>
+                            <li><a href="ui.html">超级喜欢的书</a></li>
+                            <li><a href="forms.html">推荐书籍</a></li>
+                             <li><a href="login.html">专业书籍分组</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">增加已读书单</h1>
+                    </div>
+                </div>
+                <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    给你的森林书屋种树啦
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-1">
+                                              <p>
+                                                类别：
+                                              </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                              <p>
+                                                <select class="form-control" name="sel">
+                                                  <option value="影视原著">影视原著</option>
+                                                    <option value="青春言情">青春言情</option>
+                                                      <option value="经济管理">经济管理</option>
+                                                        <option value="推理悬疑">推理悬疑</option>
+                                                          <option value="互联网+">互联网+</option>
+                                                           <option value="职场提升">职场提升</option>
+                                                             <option value="成功励志">成功励志</option>
+                                                               <option value="心理课堂">心理课堂</option>
+                                                                 <option value="历史文化">历史文化</option>
+                                                                   <option value="人物传记">人物传记</option>
+                                                          <option value="名著经典">名著经典</option>
+                                                            <option value="军事政治">军事政治</option>
+                                                              <option value="哲学宗教">哲学宗教</option>
+                                                                <option value="英文原著">英文原著</option>
+                                                                  <option value="漫画杂志">漫画杂志</option>
+                                                                <option value="科学技术">科学技术</option>
+                                                                  <option value="文学艺术">文学艺术</option>
+                                                                    <option value="其他小说">其他小说</option>
+                                                                      <option value="其他书籍">其他书籍</option>
+
+                                                </select>
+                                              </p>
+                                            </div>
+                                          </div>
+
+                                          <div class="row">
+                                            <div class="col-md-1">
+                                              <p>
+                                                书名：
+                                              </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                              <p>
+                                                <input type="text" class="form-control" id="sm"/>
+                                              </p>
+                                              <div class="alter alter-danger" role="alert" id="smalert" style="display:none;">
+                                                书名已被加入过已读书单！
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-1">
+                                              <p>
+                                                作者：
+                                              </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                              <p>
+                                                <input type="text" class="form-control" id="zz"/>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-1">
+                                              <p>
+                                                次数：
+                                              </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                              <p>
+                                                <input type="number" class="form-control" value="1" id="cs"/>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div class="row text-center">
+                                                <input type="button" class="btn btn-success btnqd" value="确定" id="btn"/>
+                                            </div>
+                                          </div>
+                   <footer>
+                             <div class="container">
+                                 <div class="row">
+                                     <div class="col-md-12">
+                                        欢迎来到BookForest,brace期待您宝贵的意见,请您发送至邮箱brace-orange@qq.com
+                                     </div>
+                                 </div>
+                             </div>
+                         </footer>
+    <script src="/js/jquery-1.11.1.js"></script>
+      <script src="/js/bootstrap.js"></script>
+      <script>
+        $("#btn").click(function(){
+          var s= $("#sm").val();
+          if(!s){
+          alert("书名不能为空");
+          return;
+          }
+          $.post("/ydbook",{
+            leibie:$("select option:selected").val(),
+            shuming:$("#sm").val(),
+            zuozhe:$("#zz").val(),
+            cishu:parseInt($("#cs").val())
+          },function(data){
+          if(data.csp==1){
+            alert(" 添加成功,可在书单中查看");}
+            if(data.csp==-1){
+              alert(" 书名之前已被添加过");}
+              if(data.csp==-2){
+                alert(" 服务器错误，请联系管理员");}
+
+            $("select option:selected").val("");
+                $("#sm").val("");
+             $("#zz").val("");
+             $("#cs").val("");
+        });
+      });
+
+
+        $("#sm").blur(function(){
+          var s= $("#sm").val();
+          if(!s){
+          $("#smalert").html("请填写正确的书名,不用加书名号，系统自动添加").show();
+          return;
+          }
+          $.ajax({type:"propfind",
+          url:"/ydbook/"+$("#sm").val(),
+          success:function(data){
+            if(!data.results){
+              $("#smalert").html("书名之前已被添加").show();
+            }
+          }
+          });
+        });
+        $("#sm").focus(function(){
+            $("#smalert").hide();
+        });
+
+    </script>
+</body>
+</html>

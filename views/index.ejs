@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>BookForest-首页</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+   <link href="/css/font-awesome.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <strong>欢迎来到 B o o k - F o r e s t  </strong>
+                    &nbsp;&nbsp;
+                    <strong>属于你的小书屋</strong>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END-->
+    <div class="navbar navbar-inverse set-radius-zero">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="/img/1.jpg" />
+                </a>
+            </div>
+
+            <div class="left-div">
+                <div class="user-settings-wrapper">
+                    <ul class="nav">
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-settings">
+                              <!-- ynghuxinxi -->
+                                <div class="media">
+                                    <a class="media-left" href="#">
+                                      <!-- 头像 -->
+                                        <img src="/img/0.jpg" alt="" class="img-rounded" />
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Brace_orange </h4>
+                                        <h5>我喜欢读书</h5>
+                                    </div>
+                                </div>
+                                <hr />
+                                <h5><strong>其他信息</strong></h5>
+                                暂时没有其他啊信息
+                                <hr />
+                                <a href="#" class="btn btn-info btn-sm">暂时留白</a>&nbsp; <a href="#" class="btn btn-danger btn-sm">注册</a>
+                            </div>
+                        </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">
+                            <li><a href="add">记录已读书籍</a></li>
+                            <li><a class="menu-top-active" href="/">已读书籍清单</a></li>
+                            <li><a href="table.html">近期要读的书</a></li>
+                            <li><a href="ui.html">超级喜欢的书</a></li>
+                            <li><a href="forms.html">推荐书籍</a></li>
+                             <li><a href="login.html">专业书籍分组</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">已读书籍清单</h1>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            你的森林书屋
+                        </div>
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    你的森林书屋--已读书籍
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                              <tr>
+                                                                  <th>类别</th>
+                                                                  <th>书名</th>
+                                                                  <th>作者</th>
+                                                                  <th>次数</th>
+                                                                  <th>
+                                                                    操作
+                                                                  </th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody id="tbo">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <footer>
+                             <div class="container">
+                                 <div class="row">
+                                     <div class="col-md-12">
+                                        欢迎来到BookForest,brace期待您宝贵的意见,请您发送至邮箱brace-orange@qq.com
+                                     </div>
+                                 </div>
+                             </div>
+                         </footer>
+    <script src="/js/jquery-1.11.1.js"></script>
+      <script src="/js/bootstrap.js"></script>
+      <script>
+        $.get('ydbook',function(data){
+          $.each(data.results,function(item,a){
+            $tr=$("<tr></tr>");
+            $("<td></td>").html(a.leibie).appendTo($tr);
+            $("<td></td>").html(a.shuming).appendTo($tr);
+            $("<td></td>").html(a.zuozhe).appendTo($tr);
+            $("<td></td>").html(a.cishu).appendTo($tr);
+            $("<td><input type='button' class='btn btn-danger delbtn' value='删除' data-shuming='"+a.shuming+"'/><td><input type='button' class='btn btn-warning modbtn' value='修改' data-shuming='"+a.shuming+"' /</td>").appendTo($tr);
+            $tr.appendTo($("#tbo"));
+          });
+        });
+//事件委托
+  $("#tbo").delegate(".delbtn","click",function(){
+    if(!confirm("真的要删除吗？")){return;}
+    var shuming2=$(this).attr("data-shuming");
+    var $this=$(this);
+       $.ajax({
+         url:"/ydbook/"+shuming2,
+         type:"delete",
+         success:function(data){
+           var pd=data.results;
+           if(pd){alert("删除成功");
+           $this.parents("tr").remove();
+         }
+           else{alert("删除失败")}
+         }
+       });
+
+
+})
+  $("#tbo").delegate(".modbtn","click",function(){
+var shuxing=$(this).attr("data-shuming");
+window.location="/ydbook/"+shuxing;
+})
+      </script>
+</body>
+</html>
